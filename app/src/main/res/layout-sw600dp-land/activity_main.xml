@@ -21,184 +21,207 @@
 
     <ScrollView
         android:id="@+id/scrollDenomination"
-        android:layout_width="100dp"
+        android:layout_width="400dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTaka"
         >
 
-        <GridLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:useDefaultMargins="true"
-            android:alignmentMode="alignBounds"
+            android:layout_gravity="center"
             >
 
-            <TextView
-                android:id="@+id/txt500lbl"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="500:"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="end"
-                android:layout_columnWeight="1"
-                />
 
-            <TextView
-                android:id="@+id/txt500val"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="end"
+            <GridLayout
+                android:id="@+id/dleft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignBounds"
+                android:columnCount="2"
+                android:useDefaultMargins="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/dright"
+                app:layout_constraintTop_toTopOf="parent">
 
-                />
+                <TextView
+                    android:id="@+id/txt500lbl"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="30dp"
+                    android:text="500:"
+                    android:textColor="@color/black"
+                    android:textSize="38sp" />
 
-            <TextView
-                android:id="@+id/txt100lbl"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="100:"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="end"
-                />
+                <TextView
+                    android:id="@+id/txt500val"
+                    android:layout_gravity="start|fill"
+                    android:layout_marginBottom="30dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="38sp"
+                    android:layout_columnWeight="12"
+                    />
 
-            <TextView
-                android:id="@+id/txt100val"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="right"
-                />
+                <TextView
+                    android:id="@+id/txt100lbl"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="100:"
+                    android:textColor="@color/black"
+                    android:textSize="38sp" />
 
-            <TextView
-                android:id="@+id/txt50lbl"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="50:"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="end"
-                />
+                <TextView
+                    android:id="@+id/txt100val"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="38sp"
+                    android:layout_columnWeight="12"
+                    />
 
-            <TextView
-                android:id="@+id/txt50val"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="right"
-                />
+                <TextView
+                    android:id="@+id/txt50lbl"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="50:"
+                    android:textColor="@color/black"
+                    android:textSize="38sp" />
 
-            <TextView
-                android:id="@+id/txt20lbl"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="20:"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="end"
-                />
+                <TextView
+                    android:id="@+id/txt50val"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="38sp"
+                    android:layout_columnWeight="12"
+                    />
 
-            <TextView
-                android:id="@+id/txt20val"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="end"
-                />
+                <TextView
+                    android:id="@+id/txt20lbl"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="20:"
+                    android:textColor="@color/black"
+                    android:textSize="38sp" />
 
-            <TextView
-                android:id="@+id/txt10lbl"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="10:"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="end"
-                />
+                <TextView
+                    android:id="@+id/txt20val"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="30dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="38sp"
+                    android:layout_columnWeight="12"
+                    />
 
-            <TextView
-                android:id="@+id/txt10val"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="right"
-                />
+            </GridLayout>
 
-            <TextView
-                android:id="@+id/txt5lbl"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="5:"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="end"
-                />
 
-            <TextView
-                android:id="@+id/txt5val"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="end"
-                />
+            <GridLayout
+                android:id="@+id/dright"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:columnCount="2"
+                android:useDefaultMargins="true"
+                android:alignmentMode="alignBounds"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/dleft"
+                app:layout_constraintRight_toRightOf="parent"
+                >
 
-            <TextView
-                android:id="@+id/txt2lbl"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="2:"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="end"
-                />
+                <TextView
+                    android:id="@+id/txt10lbl"
+                    android:layout_marginBottom="30dp"
+                    android:text="10:"
+                    android:textColor="@color/black"
+                    android:textSize="38sp"
+                    android:layout_gravity="end"
+                    android:layout_columnWeight="2"
+                    />
 
-            <TextView
-                android:id="@+id/txt2val"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="right"
-                />
+                <TextView
+                    android:id="@+id/txt10val"
+                    android:layout_marginBottom="30dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="38sp"
+                    android:layout_gravity="right"
+                    />
 
-            <TextView
-                android:id="@+id/txt1lbl"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="1:"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="end"
-                />
+                <TextView
+                    android:id="@+id/txt5lbl"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="5:"
+                    android:textColor="@color/black"
+                    android:textSize="38sp"
+                    android:layout_gravity="end"
+                    />
 
-            <TextView
-                android:id="@+id/txt1val"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_gravity="right"
-                />
+                <TextView
+                    android:id="@+id/txt5val"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="38sp"
+                    android:layout_gravity="end"
+                    />
 
-        </GridLayout>
+                <TextView
+                    android:id="@+id/txt2lbl"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="2:"
+                    android:textColor="@color/black"
+                    android:textSize="38sp"
+                    android:layout_gravity="end"
+                    />
+
+                <TextView
+                    android:id="@+id/txt2val"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="38sp"
+                    android:layout_gravity="right"
+                    />
+
+                <TextView
+                    android:id="@+id/txt1lbl"
+                    android:layout_marginTop="30dp"
+                    android:text="1:"
+                    android:textColor="@color/black"
+                    android:textSize="38sp"
+                    android:layout_gravity="end"
+                    />
+
+                <TextView
+                    android:id="@+id/txt1val"
+                    android:layout_marginTop="30dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="38sp"
+                    android:layout_gravity="right"
+                    />
+
+            </GridLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </ScrollView>
 
@@ -221,16 +244,16 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:columnCount="3"
-            android:rowCount="4"
+            android:columnCount="4"
+            android:rowCount="3"
             >
 
             <Button
                 android:id="@+id/btn1"
                 android:text="1"
-                android:textSize="23sp"
+                android:textSize="100sp"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="5dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 />
@@ -238,9 +261,9 @@
             <Button
                 android:id="@+id/btn2"
                 android:text="2"
-                android:textSize="23sp"
+                android:textSize="100sp"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="5dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 />
@@ -248,9 +271,9 @@
             <Button
                 android:id="@+id/btn3"
                 android:text="3"
-                android:textSize="23sp"
+                android:textSize="100sp"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="5dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 />
@@ -258,9 +281,9 @@
             <Button
                 android:id="@+id/btn4"
                 android:text="4"
-                android:textSize="23sp"
+                android:textSize="100sp"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="5dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 />
@@ -268,9 +291,9 @@
             <Button
                 android:id="@+id/btn5"
                 android:text="5"
-                android:textSize="23sp"
+                android:textSize="100sp"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="5dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 />
@@ -278,9 +301,9 @@
             <Button
                 android:id="@+id/btn6"
                 android:text="6"
-                android:textSize="23sp"
+                android:textSize="100sp"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="5dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 />
@@ -288,9 +311,9 @@
             <Button
                 android:id="@+id/btn7"
                 android:text="7"
-                android:textSize="23sp"
+                android:textSize="100sp"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="5dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 />
@@ -298,9 +321,9 @@
             <Button
                 android:id="@+id/btn8"
                 android:text="8"
-                android:textSize="23sp"
+                android:textSize="100sp"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="5dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 />
@@ -308,9 +331,9 @@
             <Button
                 android:id="@+id/btn9"
                 android:text="9"
-                android:textSize="23sp"
+                android:textSize="100sp"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="5dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 />
@@ -318,9 +341,9 @@
             <Button
                 android:id="@+id/btn0"
                 android:text="0"
-                android:textSize="23sp"
+                android:textSize="100sp"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="5dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 />
@@ -329,9 +352,9 @@
                 android:id="@+id/btnClear"
                 android:layout_columnSpan="2"
                 android:text="Clear"
-                android:textSize="23sp"
+                android:textSize="100sp"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="5dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 />
