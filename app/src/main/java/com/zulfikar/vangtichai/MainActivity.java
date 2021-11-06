@@ -6,6 +6,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         for (Button btn : new Button[]{
                 btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0}) {
             btn.setOnClickListener(v -> {
-                txtTaka.setText(txtTaka.getText().toString() + btn.getText().toString());
+                txtTaka.setText(txtTaka.getText().toString().concat(btn.getText().toString()));
             });
         }
 
@@ -65,14 +66,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
                 int value = Integer.parseInt("0" + txtTaka.getText().toString().substring(6));
-                txt500Val.setText(String.valueOf(value / 500));
-                txt100Val.setText(String.valueOf(value % 500 / 100));
-                txt50Val.setText(String.valueOf(value % 500 % 100 / 50));
-                txt20Val.setText(String.valueOf(value % 500 % 100 % 50 / 20));
-                txt10Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 / 10));
-                txt5Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 % 10 / 5));
-                txt2Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 % 10 % 5 / 2));
-                txt1Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 % 10 % 5 % 2));
+                if (value > 4999999) {
+                    btnClearOnClick(null);
+                    Toast.makeText(MainActivity.this, "Maximum amount is 4999999", Toast.LENGTH_SHORT).show();
+                } else {
+                    txt500Val.setText(String.valueOf(value / 500));
+                    txt100Val.setText(String.valueOf(value % 500 / 100));
+                    txt50Val.setText(String.valueOf(value % 500 % 100 / 50));
+                    txt20Val.setText(String.valueOf(value % 500 % 100 % 50 / 20));
+                    txt10Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 / 10));
+                    txt5Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 % 10 / 5));
+                    txt2Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 % 10 % 5 / 2));
+                    txt1Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 % 10 % 5 % 2));
+                }
             }
         });
 
