@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/gDrive/BRACU/03Fall/Fall2021/CSE489/Assignment01/VangtiChai/app/src/main/res/layout-land/activity_main.xml" value="0.14089692101740295" />
+        <entry key="..\:/gDrive/BRACU/03Fall/Fall2021/CSE489/Assignment01/VangtiChai/app/src/main/res/layout-sw600dp-land/activity_main.xml" value="0.12726723095525996" />
+        <entry key="..\:/gDrive/BRACU/03Fall/Fall2021/CSE489/Assignment01/VangtiChai/app/src/main/res/layout-sw600dp/activity_main.xml" value="0.164453125" />
+        <entry key="..\:/gDrive/BRACU/03Fall/Fall2021/CSE489/Assignment01/VangtiChai/app/src/main/res/layout/activity_main.xml" value="0.164453125" />
         <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.21781305114638447" />
         <entry key="app/src/main/res/layout-sw600dp/activity_main.xml" value="0.15548029556650247" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22871376811594202" />
