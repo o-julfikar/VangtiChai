@@ -46,30 +46,12 @@ public class MainActivity extends AppCompatActivity {
         for (Button btn : new Button[]{
                 btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0}) {
             btn.setOnClickListener(v -> {
-                txtTaka.setText(txtTaka.getText().toString().concat(btn.getText().toString()));
-            });
-        }
-
-        btnClear.setOnClickListener(this::btnClearOnClick);
-        btnClear.setOnLongClickListener(this::btnClearOnLongClick);
-        txtTaka.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                int value = Integer.parseInt("0" + txtTaka.getText().toString().substring(6));
+                String taka = txtTaka.getText().toString().concat(btn.getText().toString());
+                int value = Integer.parseInt("0" + taka.substring(6));
                 if (value > 4999999) {
-                    btnClearOnClick(null);
                     Toast.makeText(MainActivity.this, "Maximum amount is 4999999", Toast.LENGTH_SHORT).show();
                 } else {
+                    txtTaka.setText(taka);
                     txt500Val.setText(String.valueOf(value / 500));
                     txt100Val.setText(String.valueOf(value % 500 / 100));
                     txt50Val.setText(String.valueOf(value % 500 % 100 / 50));
@@ -79,9 +61,11 @@ public class MainActivity extends AppCompatActivity {
                     txt2Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 % 10 % 5 / 2));
                     txt1Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 % 10 % 5 % 2));
                 }
-            }
-        });
+            });
+        }
 
+        btnClear.setOnClickListener(this::btnClearOnClick);
+        btnClear.setOnLongClickListener(this::btnClearOnLongClick);
         recover(savedInstanceState);
     }
 

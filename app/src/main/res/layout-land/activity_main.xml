@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/txtTaka"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:gravity="center"
         android:text="Taka: "
         android:textColor="@color/black"
@@ -235,10 +235,9 @@
         app:layout_constraintTop_toBottomOf="@id/txtTaka"
         >
 
-
         <GridLayout
             android:id="@+id/layoutButtons"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -251,112 +250,112 @@
             <Button
                 android:id="@+id/btn1"
                 android:text="1"
-                android:textSize="46sp"
+                android:textSize="33sp"
                 android:textStyle="bold"
                 android:layout_margin="1dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 />
 
             <Button
                 android:id="@+id/btn2"
                 android:text="2"
-                android:textSize="46sp"
+                android:textSize="33sp"
                 android:textStyle="bold"
                 android:layout_margin="1dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 />
 
             <Button
                 android:id="@+id/btn3"
                 android:text="3"
-                android:textSize="46sp"
+                android:textSize="33sp"
                 android:textStyle="bold"
                 android:layout_margin="1dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 />
 
             <Button
                 android:id="@+id/btn4"
                 android:text="4"
-                android:textSize="46sp"
+                android:textSize="33sp"
                 android:textStyle="bold"
                 android:layout_margin="1dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 />
 
             <Button
                 android:id="@+id/btn5"
                 android:text="5"
-                android:textSize="46sp"
+                android:textSize="33sp"
                 android:textStyle="bold"
                 android:layout_margin="1dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 />
 
             <Button
                 android:id="@+id/btn6"
                 android:text="6"
-                android:textSize="46sp"
+                android:textSize="33sp"
                 android:textStyle="bold"
                 android:layout_margin="1dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 />
 
             <Button
                 android:id="@+id/btn7"
                 android:text="7"
-                android:textSize="46sp"
+                android:textSize="33sp"
                 android:textStyle="bold"
                 android:layout_margin="1dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 />
 
             <Button
                 android:id="@+id/btn8"
                 android:text="8"
-                android:textSize="46sp"
+                android:textSize="33sp"
                 android:textStyle="bold"
                 android:layout_margin="1dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 />
 
             <Button
                 android:id="@+id/btn9"
                 android:text="9"
-                android:textSize="46sp"
+                android:textSize="33sp"
                 android:textStyle="bold"
                 android:layout_margin="1dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 />
 
             <Button
                 android:id="@+id/btn0"
                 android:text="0"
-                android:textSize="46sp"
+                android:textSize="33sp"
                 android:textStyle="bold"
                 android:layout_margin="1dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 />
 
             <Button
                 android:id="@+id/btnClear"
                 android:layout_columnSpan="2"
                 android:text="Clear"
-                android:textSize="46sp"
+                android:textSize="33sp"
                 android:textStyle="bold"
                 android:layout_margin="1dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:layout_width="161dp"
+                android:layout_height="80dp"
                 />
         </GridLayout>
 
