@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_font_land">33sp</dimen>
+    <dimen name="btn_font_tab">100sp</dimen>
+    <dimen name="btn_font">23sp</dimen>
+    <dimen name="denomination_font_tab">42sp</dimen>
+    <dimen name="denomination_font">18sp</dimen>
+    <dimen name="taka_font">30sp</dimen>
+    <dimen name="taka_height">50dp</dimen>
+    <dimen name="zero_dp">0dp</dimen>
+    <dimen name="denomination_margin">10dp</dimen>
+    <dimen name="denomination_margin_tab">20dp</dimen>
+    <dimen name="denomination_margin_tab_land">37dp</dimen>
+    <dimen name="denomination_margin_land">15dp</dimen>
+    <dimen name="main_padding">10dp</dimen>
+    <dimen name="denomination_scroll_width_land">200dp</dimen>
+    <dimen name="denomination_scroll_width_tab">200dp</dimen>
+    <dimen name="denomination_scroll_width">100dp</dimen>
+    <dimen name="denomination_scroll_width_tab_land">400dp</dimen>
+    <dimen name="button_padding">5dp</dimen>
+    <dimen name="button_margin_tab_land">5dp</dimen>
+    <dimen name="btn_size">80dp</dimen>
+</resources>
