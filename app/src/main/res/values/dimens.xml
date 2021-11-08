@@ -18,6 +18,7 @@
     <dimen name="denomination_scroll_width">100dp</dimen>
     <dimen name="denomination_scroll_width_tab_land">400dp</dimen>
     <dimen name="button_padding">5dp</dimen>
-    <dimen name="button_margin_tab_land">5dp</dimen>
     <dimen name="btn_size">80dp</dimen>
+    <dimen name="btn_margin">1dp</dimen>
+    <dimen name="btn_margin_tab">5dp</dimen>
 </resources>

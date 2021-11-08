@@ -5,8 +5,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         txt2Val = findViewById(R.id.txt2val);
         txt1Val = findViewById(R.id.txt1val);
         txtTaka = findViewById(R.id.txtTaka);
-
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
@@ -47,51 +44,44 @@ public class MainActivity extends AppCompatActivity {
         recover(savedInstanceState);
     }
 
-    private int getTaka(String taka) {
-        return Integer.parseInt("0" + taka.substring(6));
-    }
-
-    private void vangtiChai(int value) {
-        txt500Val.setText(String.valueOf(value / 500));
-        txt100Val.setText(String.valueOf(value % 500 / 100));
-        txt50Val.setText(String.valueOf(value % 500 % 100 / 50));
-        txt20Val.setText(String.valueOf(value % 500 % 100 % 50 / 20));
-        txt10Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 / 10));
-        txt5Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 % 10 / 5));
-        txt2Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 % 10 % 5 / 2));
-        txt1Val.setText(String.valueOf(value % 500 % 100 % 50 % 20 % 10 % 5 % 2));
-    }
-
-    private void btnClearOnClick(View view) {
-        String takaText = txtTaka.getText().toString();
-        if (!takaText.equals("Taka: ")) {
-            txtTaka.setText(takaText.substring(0, takaText.length() - 1));
-            vangtiChai(getTaka(txtTaka.getText().toString()));
-        }
-    }
-
-    private boolean btnClearOnLongClick(View view) {
-        txtTaka.setText(R.string.taka);
-        vangtiChai(0);
-        return true;
-    }
-
     private void addButtonClickListener() {
-        for (Button btn : new Button[]{
-                btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0}) {
+        for (Button btn : new Button[]{btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0}) {
             btn.setOnClickListener(v -> {
-                String taka = txtTaka.getText().toString().concat(btn.getText().toString());
-                int value = getTaka(taka);
+                int value = getTaka(txtTaka.getText().toString().concat(btn.getText().toString()));
                 if (value > 4999999) {
                     limitToast.show();
                 } else {
-                    txtTaka.setText(R.string.taka + value);
+                    txtTaka.setText(String.format(java.util.Locale.ENGLISH, "%s%d", getString(R.string.taka), value));
                     vangtiChai(value);
                 }
             });
         }
         btnClear.setOnClickListener(this::btnClearOnClick);
         btnClear.setOnLongClickListener(this::btnClearOnLongClick);
+    }
+
+    private void btnClearOnClick(View view) {
+        String takaText = txtTaka.getText().toString();
+        if (!takaText.equals(getString(R.string.taka))) {
+            txtTaka.setText(takaText.substring(0, takaText.length() - 1));
+            vangtiChai(getTaka(txtTaka.getText().toString()));
+        }
+    }
+
+    private boolean btnClearOnLongClick(View view) {
+        txtTaka.setText(getString(R.string.taka));
+        vangtiChai(0);
+        return true;
+    }
+
+    private int getTaka(String taka) {
+        return Integer.parseInt("0" + taka.substring(6));
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString("taka", txtTaka.getText().toString());
+        super.onSaveInstanceState(outState);
     }
 
     private void recover(Bundle savedInstanceState) {
@@ -101,9 +91,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.putString("taka", txtTaka.getText().toString());
-        super.onSaveInstanceState(outState);
+    private void vangtiChai(int value) {
+        int[] notes = {value + 1, 500, 100, 50, 20, 10, 5, 2, 1};
+        TextView[] views = {txt500Val, txt100Val, txt50Val, txt20Val, txt10Val, txt5Val, txt2Val, txt1Val};
+        for (int i = 0; i < views.length; i++)
+            views[i].setText(String.valueOf((value %= notes[i]) / notes[i + 1]));
     }
 }

@@ -252,7 +252,7 @@
                 android:text="@string/btn1_text"
                 android:textSize="@dimen/btn_font_land"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="@dimen/btn_margin"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 />
@@ -262,7 +262,7 @@
                 android:text="@string/btn2_text"
                 android:textSize="@dimen/btn_font_land"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="@dimen/btn_margin"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 />
@@ -272,7 +272,7 @@
                 android:text="@string/btn3_text"
                 android:textSize="@dimen/btn_font_land"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="@dimen/btn_margin"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 />
@@ -282,7 +282,7 @@
                 android:text="@string/btn4_text"
                 android:textSize="@dimen/btn_font_land"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="@dimen/btn_margin"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 />
@@ -292,7 +292,7 @@
                 android:text="@string/btn5_text"
                 android:textSize="@dimen/btn_font_land"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="@dimen/btn_margin"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 />
@@ -302,7 +302,7 @@
                 android:text="@string/btn6_text"
                 android:textSize="@dimen/btn_font_land"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="@dimen/btn_margin"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 />
@@ -312,7 +312,7 @@
                 android:text="@string/btn7_text"
                 android:textSize="@dimen/btn_font_land"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="@dimen/btn_margin"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 />
@@ -322,7 +322,7 @@
                 android:text="@string/btn8_text"
                 android:textSize="@dimen/btn_font_land"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="@dimen/btn_margin"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 />
@@ -332,7 +332,7 @@
                 android:text="@string/btn9_text"
                 android:textSize="@dimen/btn_font_land"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="@dimen/btn_margin"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 />
@@ -342,7 +342,7 @@
                 android:text="@string/btn0_text"
                 android:textSize="@dimen/btn_font_land"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="@dimen/btn_margin"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 tools:ignore="DuplicateSpeakableTextCheck"
@@ -354,7 +354,7 @@
                 android:text="@string/btnClear_text"
                 android:textSize="@dimen/btn_font_land"
                 android:textStyle="bold"
-                android:layout_margin="1dp"
+                android:layout_margin="@dimen/btn_margin"
                 android:layout_width="161dp"
                 android:layout_height="80dp"
                 />
