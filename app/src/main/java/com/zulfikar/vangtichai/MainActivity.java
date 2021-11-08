@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
     private void vangtiChai(int value) {
         int[] notes = {value + 1, 500, 100, 50, 20, 10, 5, 2, 1};
         TextView[] views = {txt500Val, txt100Val, txt50Val, txt20Val, txt10Val, txt5Val, txt2Val, txt1Val};
-        for (int i = 0; i < views.length; i++)
-            views[i].setText(String.valueOf((value %= notes[i]) / notes[i + 1]));
+        for (int i = 0; i < views.length; i++) views[i].setText(String.valueOf((value %= notes[i]) / notes[i + 1]));
     }
 }
